@@ -1,13 +1,18 @@
 package com.railway.app.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 public class DemoController {
 
-	@GetMapping({"/","/demo","deploy"})
-	public String getDeploy() {
-		return "Spring App is Successfully Deployed in Railway.app!!";
+	@GetMapping({"/","/user"})
+	public String getHome() {
+		return "userHome";
+	}
+	
+	@GetMapping("/admin")
+	public String getAdmin() {
+		return "adminHome";
 	}
 }
